@@ -1,0 +1,14 @@
+val cellSize = views.virtualWidth / 5.0
+                val fieldSize = 50 + 4 * cellSize
+                val leftIndent = (views.virtualWidth - fieldSize) / 2
+                val topIndent = 150.0
+                graphics {
+
+                    fill(Colors["#cec0b2"]) {
+                        for (i in 0..3) {
+                            for (j in 0..3) {
+                                roundRect(10.0 + (10.0 + cellSize) * i, 10.0 + (10.0 + cellSize) * j, cellSize, cellSize, 5.0)
+                            }
+                        }
+                    }
+                }.position(leftIndent, topIndent)
